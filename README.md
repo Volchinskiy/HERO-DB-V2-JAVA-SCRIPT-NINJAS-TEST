@@ -1,14 +1,13 @@
-### `yarn test`
-
 What is this project? Database for comic book characters.
 
 What technologies did I use? 
 Front: React, Redux, Redux-saga, Axios, Node-sass Typescript.
+
 Back: Nest, Pg, Typeorm, Multer, Typescript.
 
 How to run it?
 
-**You must have PostgreSQL, Node installed.**
+**You must have PostgreSQL, Node.js installed.**
 
 Оpen a terminal in the root folder of the project.
 Run these commands.
@@ -19,8 +18,9 @@ Run these commands.
 ### `cd back`
 ### `yarn install`
 
-In "back" folder rename example.env to .env and write your connection data for PostgreSQL.
-In "front" folder rename example.env to .env.
+In "back" folder rename example.env to .env and write your connection data for PostgreSQL
+
+In "front" folder rename example.env to .env
 
 Enter to PostgreSQL with this command.
 ### `psql -U <user>`
