@@ -1,0 +1,13 @@
+INSERT INTO super_hero (nickname, real_name, origin_description, superpowers, catch_phrase) VALUES ('Superman', 'Clark Kent', 'he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton''s destruction...', 'solar energy absorption and healing factor, solar flare and heat vision, solar invulnerability, flight...', 'Look, up in the sky, it''s a bird, it''s a plane, it''s Superman!');
+INSERT INTO super_hero (nickname) VALUES ('Flash');
+INSERT INTO super_hero (nickname) VALUES ('Wolverine');
+INSERT INTO super_hero (nickname) VALUES ('Iron Man');
+INSERT INTO super_hero (nickname) VALUES ('Сaptain America');
+INSERT INTO super_hero (nickname) VALUES ('Thor');
+INSERT INTO super_hero (nickname) VALUES ('Hulk');
+INSERT INTO super_hero (nickname) VALUES ('Spider Man');
+INSERT INTO super_hero (nickname) VALUES ('The Thing');
+INSERT INTO super_hero (nickname) VALUES ('Daredevil');
+INSERT INTO super_hero (nickname) VALUES ('Deadpool');
+INSERT INTO super_hero (nickname) VALUES ('Hellblazer');
+INSERT INTO super_hero (nickname) VALUES ('Savage');

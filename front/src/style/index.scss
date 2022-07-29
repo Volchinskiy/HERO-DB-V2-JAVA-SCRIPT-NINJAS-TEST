@@ -1,0 +1,219 @@
+// VARIABLE
+$dark: #303030;
+$medium: #9e9e9e;
+$light-medium: #dedede;
+$light: #f6f6f6;
+$light-light: #fff;
+$button-selected: #92b19c;
+$repeat-color: rgb(164, 82, 82);
+$border-radius: 0px;
+$transition-value: all .1s;
+
+// MIXIM
+@mixin treeD-illusion($Shadow, $InsetS) {
+  background-color: $light-medium;
+  box-shadow: $Shadow/2 $Shadow/2 $dark, $Shadow $Shadow $dark, inset $InsetS $InsetS $light;
+  border-radius: $border-radius;
+}
+
+@mixin treeD-button($Width, $Heigth, $Shadow, $InsetS){
+  width: $Width;
+  height: $Heigth;
+  
+  border: 0;
+
+  &:hover{
+    box-shadow: $Shadow/1.8 $Shadow/1.8 $dark, $Shadow*1.2 $Shadow*1.2 $dark;
+    background-color: $button-selected;
+  }
+
+  &:active{
+    box-shadow: $Shadow/2/2 $Shadow/2/2 $dark, $Shadow/2 $Shadow/2 $dark;
+  }
+
+  transition: all .1s;
+  @include treeD-illusion($Shadow, $InsetS);
+}
+
+// SETTINGS
+*{
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+
+  overflow: hidden;
+  background-color: $medium;
+}
+
+li{
+  font-size: 30px;
+
+  transition: all .1s;
+  &:hover{
+    color: $repeat-color;
+  }
+  
+  &:active{
+    color: red;
+  }
+}
+
+// GENERAL
+.content{
+  display: flex
+}
+
+button{
+  @include treeD-button(auto, 30px, 3px, 1.5px);
+  padding: 0px 10px 0px 10px;
+  margin: 5px;
+}
+
+header{
+  width: 100%;
+  height: 7vh;
+
+  padding: 5px 0px 0px 5px;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  color: #FFF;
+}
+
+.add-hero-btn{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+// HERO ITEM
+.hero-container{
+  width: 100%;
+  height: 93vh;
+
+  padding: 0px 30px 0px 30px;
+
+  overflow-y: auto;
+
+  &_item{
+    width: 100%;
+    height: 10vh;
+    @include treeD-illusion(5px, 2.5px);
+
+    padding: 0px 10px 0px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 20px 0px 20px 0px;
+
+    &-name{
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    &-open{
+      position: relative;
+      width: 100%;
+      height: 30vh;
+      @include treeD-illusion(5px, 2.5px);
+  
+      padding: 0px 10px 0px 10px;
+  
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      margin: 20px 0px 20px 0px;
+     
+      &_description{
+        width: 50%;
+        height: 100%;
+
+        padding: 10px 0px 10px 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        div{
+          font-size: 18px;
+        }
+
+        input{
+          width: 250px;
+          height: 25px;
+          display: block;
+          margin: 10px 0px 10px 0px;
+        }
+      }
+
+      &_img-wrapper{
+        width: 50%;
+        height: 100%;
+
+        img{
+          max-width: 40%;
+          max-height: 40%;
+        }
+      }
+  
+      &_delete-img{
+        position: absolute;
+      }
+
+      &_button-wrapper{
+        position: absolute;
+        top: 20px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+// HERO ADD ARE
+.addHeroArea{
+  width: 30%;
+  height: 93vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  input{
+    width: 350px;
+    height: 25px;
+  }
+
+  textarea{
+    min-width: 350px;
+    width: 350px;
+    max-width: 350px;
+
+    min-height: 150px;
+    height: 150px;
+    max-height: 150px;
+  }
+
+  label{
+    font-size: 17px;
+  }
+}
+
+// MODIFICATOR
+.--seventyPercent{
+  width: 70%;
+}
+
+
